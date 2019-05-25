@@ -1,0 +1,34 @@
+package com.emalcoding.springBootREST.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.emalcoding.springBootREST.model.Product;
+import com.emalcoding.springBootREST.repository.ProductRepository;
+
+@Service
+public class ProductDao {
+	
+	@Autowired
+	ProductRepository productRepository;
+	
+	public Product save(Product pro) {
+		return productRepository.save(pro);
+	}
+	
+	public List<Product> findAll(){
+		return productRepository.findAll();
+	}
+	
+	public Product findOne(Long proid) {
+		return productRepository.findOne(proid);
+		
+	}
+	
+	public void delete(Product pro) {
+		productRepository.delete(pro);
+	}
+
+}

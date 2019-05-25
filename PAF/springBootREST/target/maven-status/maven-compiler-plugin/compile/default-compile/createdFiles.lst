@@ -1,0 +1,5 @@
+com\springBootREST\controller\OderController.class
+com\springBootREST\repository\OderRepository.class
+com\springBootREST\dao\OderDao.class
+com\springBootREST\model\Oder.class
+com\springBootREST\OderApplication.class

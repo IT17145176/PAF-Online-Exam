@@ -1,0 +1,10 @@
+1557998105653	Delete element
+1558092851021	Rename type 'Product'
+1558092953737	Rename type 'ProductRepository'
+1558092985210	Rename type 'ProductDao'
+1558093019090	Rename type 'ProductController'
+1558093056721	Rename type 'ProductApplication'
+1558093235818	Rename package 'com.emalcoding.springBootREST'
+1558093299431	Rename package 'com.emalcoding.springBootREST.repository'
+1558093323551	Rename package 'com.emalcoding.springBootREST.model'
+1558093601966	Rename package 'com.emalcoding.springBootREST.dao'

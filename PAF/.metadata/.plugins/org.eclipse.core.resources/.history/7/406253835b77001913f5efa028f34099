@@ -1,0 +1,5 @@
+package com.emalcoding.springBootREST.controller;
+
+public class ProductController {
+
+}

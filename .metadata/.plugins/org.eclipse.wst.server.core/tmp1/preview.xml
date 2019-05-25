@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="PAF-ONLINE" name="PAF-ONLINE" path="C:/Users/Lathika-SLIIT/Desktop/PAF-Online/PAF-Online-Exam/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/PAF-ONLINE" type="j2ee"/>
+</server>

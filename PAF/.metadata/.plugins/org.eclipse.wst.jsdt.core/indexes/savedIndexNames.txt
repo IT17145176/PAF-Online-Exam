@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+H:\PAF\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2326497134.index
+1135236266.index
+2785917299.index
+770890295.index
+2244915736.index

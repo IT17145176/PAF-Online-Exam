@@ -1,0 +1,5 @@
+package com.emalcoding.springBootREST.model;
+
+public class Product {
+
+}

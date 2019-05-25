@@ -1,0 +1,68 @@
+package com.emalcoding.springBootREST.controller;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.emalcoding.springBootREST.dao.ProductDao;
+import com.emalcoding.springBootREST.model.Product;
+
+@RestController
+@RequestMapping("/company")
+public class ProductController {
+	
+	@Autowired
+	ProductDao productDao;
+	
+	/*to save an product*/
+	@PostMapping("/products")
+	public Product createProduct(@Valid @RequestBody Product pro) {
+		return productDao.save(pro);
+	}
+
+	/*get all products*/
+	@GetMapping("/products")
+	public List<Product> getAllProduct(){
+		return productDao.findAll();
+	}
+	
+	/*get product by proid*/
+	@GetMapping("/notes/{id}")
+	public ResponseEntity<Product> getProductById(@PathVariable(value="id") Long proid) {
+		
+		Product pro=productDao.findOne(proid);
+		
+		if(pro==null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok().body(pro);
+		}
+	
+	/*update an product by proid*/
+	@PutMapping("/products/{id}")
+	public ResponseEntity<Product> updateProduct(@PathVariable(value="id") Long proid,@Valid @RequestBody Product proDetails){
+		
+		Product pro=productDao.findOne(proid);
+		
+
+		if(pro==null) {
+			return ResponseEntity.notFound().build();
+		}
+		pro.setName(proDetails.getName());
+		pro.setDescription(proDetails.getDescription());
+		pro.setDate(proDetails.getDate());
+		pro.setPrice(proDetails.getPrice());
+	}
+	
+	}
+
+
